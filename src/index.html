@@ -58,7 +58,7 @@
     <div id="product-list" class="product-list container"></div>
 
     <script id="template-menu-product" type="text/x-handlebars-template">
-      <article class="product active"> <!-- product -->
+      <article class="product "> <!-- product -->
 
           <header class="product__header">
             <h3 class="product__name no-spacing">{{ name }} <i class="fas fa-chevron-down product__icon"></i></h3>
@@ -135,6 +135,22 @@
 
       </article> <!-- .product -->
     </script>
+
+<script id="template-cart-product" type="text/x-handlebars-template">
+  <li class="cart__order-summary__item">
+    <span class="cart__order-summary__name">{{ name }}</span>
+
+    <div class="widget-amount">
+      <a href="#less">-</a>
+      <input type="text" value="{{ amount }}">
+      <a href="#more">+</a>
+    </div>
+
+    <span class="cart__order-summary__price">${{ price }}</span>
+  </li>
+</script>
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/functions.js"></script>
