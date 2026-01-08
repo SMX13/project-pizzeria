@@ -24,7 +24,8 @@
         "watch:browsersync": "browser-sync start --server dist --files \"dist/**/*\"",
         "watch:sassprefixer": "onchange \"src/sass/**/*.scss\" -- npm run build-dev",
         "watch:copy": "onchange -e \"**/sass/**/*\" -e \"**/.gitkeep\" \"src/**/*\" -- copyfiles -a -u 1 {{changed}} dist",
-        "server": "json-server --watch src/db/app.json --port 3131"
+        "server": "json-server --watch src/db/app.json --port 3131",
+        "all": "npm-run-all --parallel watch server"
 
     },
     "keywords": [],
